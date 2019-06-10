@@ -1,7 +1,7 @@
 {% extends "./layout.html" %}
 
 {% block pageTitle %}
-  Register of public-facing services provided by the Ministry of Justice, UK
+  Register of conceptual services provided by the HM Land Registry
 {% endblock %}
 
 {% block beforeContent %}
@@ -17,34 +17,91 @@
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 		<h1 class="govuk-heading-xl">
-			Register of public-facing services
+			Register of conceptual services
 		</h1>
 
-		<p class="govuk-body-l">Services delivered to citizens by the Ministry of Justice and related organisations as of June 2019.</p>
+		<p class="govuk-body-l">Services list - a conceptual view, encompassing existing statutory and non-statutory forms, products and services. June 2019.</p>
 
     </div>
 </div>
 
-{% include "./includes/_stats.html" %}
+
 
 <div class="govuk-grid-row">
 	<div class="govuk-grid-column-two-thirds">
-		<h2 class="govuk-heading-l">
-			Organisations
+
+		<h2 class="govuk-heading-l govuk-visually-hidden">
+			I need to find out about land or property
 		</h2>
-		{% for organisation in data.organisations -%}
-			<h3 class="govuk-heading-m">
-				{{ organisation.name }}
-			</h3>
-			<p class="govuk-body">
-				{{ organisation.description }}
-			</p>
-			<p class="govuk-body">
-				<a class="govuk-link" href="./{{ organisation.slug }}/" title="View all services by {{ organisation.name }}">
-					View all services<span class="govuk-visually-hidden"> by {{ organisation.name }}</span>
-				</a>
-			</p>
-		{%- endfor %}
+		<ul class="govuk-list">
+			<li>View registered land or property</li>
+			<li>View land or property boundaries</li>
+			<li>Contact the owner of land or property</li>
+		</ul>
+
+		<h2 class="govuk-heading-l govuk-visually-hidden">
+			I need to sell or buy a property
+		</h2>
+		<ul class="govuk-list">
+			<li>Assure ownership of land or property</li>
+			<li>Register intent to update land or property details</li>
+			<li>Split land or property title</li>
+		</ul>
+
+		<h2 class="govuk-heading-l govuk-visually-hidden">
+			I need to gift or receive a gifted property
+		</h2>
+		<ul class="govuk-list">
+			<li>Update property ownership after a sale or gift</li>
+			<li>Update property ownership after a death</li>
+		</ul>
+
+		<h2 class="govuk-heading-l govuk-visually-hidden">
+			I need to protect my property or interest
+		</h2>
+		<ul class="govuk-list">
+			<li>Update property ownership after divorce or separation</li>
+			<li>Update land or property owner’s details</li>
+			<li>Report a land or property registration error</li>
+			<li>Register, extend or cancel a lease on land or property</li>
+			<li>Protect a right to use land or property or take natural resources from it</li>
+			<li>Register a right of way over land or property</li>
+			<li>Register a restriction, caution or notice on land or property</li>
+			<li>Protect your right to stay in your marital home during a divorce or separation</li>
+		</ul>
+
+		<h2 class="govuk-heading-l govuk-visually-hidden">
+			I want to develop properties
+		</h2>
+		<ul class="govuk-list">
+			<li>Combine land or property titles</li>
+		</ul>
+
+		<h2 class="govuk-heading-l govuk-visually-hidden">
+			I need to refinance a property
+		</h2>
+		<ul class="govuk-list">
+			<li>Register or cancel a mortgage on land or property</li>
+			<li>Use farming stock or equipment as security for a loan</li>
+		</ul>
+
+		<h2 class="govuk-heading-l govuk-visually-hidden">
+			I want to claim some land
+		</h2>
+		<ul class="govuk-list">
+			<li>Register land or property for the first time</li>
+			<li>Claim ownership of land or property</li>
+		</ul>
+
+		<h2 class="govuk-heading-l govuk-visually-hidden">
+			I want to use property data in my service or business
+		</h2>
+		<ul class="govuk-list">
+			<li>Access sensitive information relating to land or property</li>
+			<li>Use land or property data</li>
+		</ul>
+
+
 	</div>
 </div>
 {% endblock %}
