@@ -2,7 +2,7 @@
 
 Conceptual Services delivered by HM Land Registry as of June 2019.
 
-The HMLR register can be found at https://xxx-register-of-services.herokuapp.com/
+The HMLR register can be found at https://hmlr-register-of-services.herokuapp.com/
 
 
 This is copied from Ministry of Justice Register of public-facing services
