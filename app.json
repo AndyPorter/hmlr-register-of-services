@@ -1,8 +1,8 @@
 {
-  "name": "moj-list-of-services",
-  "description": "Services delivered to citizens by the Ministry of Justice and related organisations.",
+  "name": "HMLR-list-of-services",
+  "description": "Services delivered HM Land Registry.",
   "keywords": [
-    "ministry-of-justice"
+    "hm-land-registry"
   ],
   "website": "https://moj-list-of-services.herokuapp.com/",
   "repository": "https://github.com/gavinwye/moj-list-of-services",
