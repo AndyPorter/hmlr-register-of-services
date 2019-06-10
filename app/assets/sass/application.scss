@@ -1,0 +1,38 @@
+// global styles for <a> and <p> tags
+$govuk-global-styles: true;
+
+// Import GOV.UK Frontend and any extension styles if extensions have been configured
+@import "lib/extensions/extensions";
+
+// Patterns that aren't in Frontend
+@import "patterns/check-your-answers";
+@import "patterns/related-items";
+@import "patterns/step-by-step-navigation";
+@import "patterns/task-list";
+
+// Components that aren't in Frontend
+@import "components/box";
+@import "components/cookie-banner";
+@import "components/pagination";
+
+// Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
+
+.moj-body-emphasis {
+	font-style: italic;
+}
+
+abbr[title], dfn[title] {
+    cursor: help;
+    outline: 0;
+    text-decoration: none;
+}
+
+abbr[title]:focus {
+  background-color: govuk-colour("yellow");
+  outline: 3px solid govuk-colour("yellow");
+  border-bottom: 1px dotted govuk-colour("black");
+}
+
+abbr[title]:focus::after {
+  content: " (" attr(title) ")";
+}
