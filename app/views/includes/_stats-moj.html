@@ -3,10 +3,14 @@
 		<div class="moj-box">
 			<div class="moj-box__content moj-box--digital">
 				<p class="govuk-body govuk-!-font-size-80 govuk-!-font-weight-bold govuk-!-margin-bottom-0">
-						4
+					<a href="{{ links.types.digital_by_default }}">
+						{{ data.counts.digital_by_default | numeral('0,00') }}
+					</a>
 				</p>
 				<p class="govuk-body govuk-!-font-size-19 govuk-!-margin-bottom-0">
+					<a href="{{ links.types.digital_by_default }}">
 						<span class="govuk-visually-hidden">View all services that are classified as </span>Digital by default
+					</a>
 				</p>
 			</div>
 		</div>
@@ -15,10 +19,14 @@
 		<div class="moj-box">
 			<div class="moj-box__content moj-box--non-digital">
 				<p class="govuk-body govuk-!-font-size-80 govuk-!-font-weight-bold govuk-!-margin-bottom-0">
-						12
+					<a href="{{ links.types.not_digital_by_default }}">
+						{{ data.counts.not_digital_by_default | numeral('0,00') }}
+					</a>
 				</p>
 				<p class="govuk-body govuk-!-font-size-19 govuk-!-margin-bottom-0">
+					<a href="{{ links.types.not_digital_by_default }}">
 						<span class="govuk-visually-hidden">View all services that are classified as </span>Not digital by default
+					</a>
 				</p>
 			</div>
 		</div>
@@ -27,10 +35,14 @@
 		<div class="moj-box">
 			<div class="moj-box__content moj-box--info">
 				<p class="govuk-body govuk-!-font-size-80 govuk-!-font-weight-bold govuk-!-margin-bottom-0">
-						6
+					<a href="{{ links.types.information_site }}">
+						{{ data.counts.information_site | numeral('0,00') }}
+					</a>
 				</p>
 				<p class="govuk-body govuk-!-font-size-19 govuk-!-margin-bottom-0">
+					<a href="{{ links.types.information_site }}">
 						<span class="govuk-visually-hidden">View all services that are classified as </span>Information site
+					</a>
 				</p>
 			</div>
 		</div>
@@ -39,10 +51,14 @@
 		<div class="moj-box">
 			<div class="moj-box__content moj-box--paper">
 				<p class="govuk-body govuk-!-font-size-80 govuk-!-font-weight-bold govuk-!-margin-bottom-0">
-						1
+					<a href="{{ links.types.paper_based }}">
+						{{ data.counts.paper_based | numeral('0,00') }}
+					</a>
 				</p>
 				<p class="govuk-body govuk-!-font-size-19 govuk-!-margin-bottom-0">
+					<a href="{{ links.types.paper_based }}">
 						<span class="govuk-visually-hidden">View all services that are classified as </span>Paper-based
+					</a>
 				</p>
 			</div>
 		</div>
