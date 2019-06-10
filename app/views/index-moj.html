@@ -1,0 +1,50 @@
+{% extends "./layout.html" %}
+
+{% block pageTitle %}
+  Register of public-facing services provided by the Ministry of Justice, UK
+{% endblock %}
+
+{% block beforeContent %}
+{#{ govukPhaseBanner({
+	"tag": {
+		"text": "alpha"
+	},
+	"html": "This is a new service - your <a href=\"#\">feedback</a> will help us to improve it."
+}) }#}
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+		<h1 class="govuk-heading-xl">
+			Register of public-facing services
+		</h1>
+
+		<p class="govuk-body-l">Services delivered to citizens by the Ministry of Justice and related organisations as of June 2019.</p>
+
+    </div>
+</div>
+
+{% include "./includes/_stats-moj.html" %}
+
+<div class="govuk-grid-row">
+	<div class="govuk-grid-column-two-thirds">
+		<h2 class="govuk-heading-l">
+			Organisations
+		</h2>
+		{% for organisation in data.organisations -%}
+			<h3 class="govuk-heading-m">
+				{{ organisation.name }}
+			</h3>
+			<p class="govuk-body">
+				{{ organisation.description }}
+			</p>
+			<p class="govuk-body">
+				<a class="govuk-link" href="./{{ organisation.slug }}/" title="View all services by {{ organisation.name }}">
+					View all services<span class="govuk-visually-hidden"> by {{ organisation.name }}</span>
+				</a>
+			</p>
+		{%- endfor %}
+	</div>
+</div>
+{% endblock %}

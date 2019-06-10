@@ -28,6 +28,34 @@ router.get('/', (req, res) => {
 
 });
 
+
+
+
+router.get('/index-moj', (req, res) => {
+
+	res.render('index-moj',
+		{
+			links: {
+				types: {
+					'digital_by_default': `${req.baseUrl}/maturity/digital-by-default`,
+					'not_digital_by_default': `${req.baseUrl}/maturity/not-digital-by-default`,
+					'information_site': `${req.baseUrl}/maturity/information-site`,
+					'paper_based': `${req.baseUrl}/maturity/paper-based`
+				}
+			},
+			data: {
+				organisations: data.getOrganisations(),
+				counts: {
+					digital_by_default: data.getServicesCountByDigitalMaturity('digital-by-default'),
+					not_digital_by_default: data.getServicesCountByDigitalMaturity('not-digital-by-default'),
+					information_site: data.getServicesCountByDigitalMaturity('information-site'),
+					paper_based: data.getServicesCountByDigitalMaturity('paper-based')
+				}
+			}
+		});
+
+});
+
 router.get('/maturity/:maturity/', (req, res) => {
 
 	if (!data.isValidDigitalMaturity(req.params.maturity)) {
